@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swagger UI</title>
+  <!-- Carga el CSS de Swagger UI -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist/swagger-ui.css" />
+</head>
+<body>
+  <!-- Contenedor de Swagger UI -->
+  <div id="swagger-ui"></div>
+
+  <!-- Carga el bundle JS de Swagger UI -->
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist/swagger-ui-bundle.js"></script>
+  <script>
+    const ui = SwaggerUIBundle({
+      url: 'https://raw.githubusercontent.com/Nestorfron/api2/master/openapi.yaml', // URL de tu archivo openapi.yaml en GitHub
+      dom_id: '#swagger-ui',
+      deepLinking: true,
+      presets: [
+        SwaggerUIBundle.presets.apis,
+        SwaggerUIBundle.presets.ui
+      ],
+    });
+  </script>
+</body>
+</html>
